@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Prime Number Check</title>
+    <meta
+      name="description"
+      content="Prime number check algorithm. It verifies if any positive integer up to (2^53) - 1, is a prime number or not."
+    />
+    <meta
+      name="keywords"
+      content="Prime, prime, number, computer program, algorithm, Direct Search Factorization, composite, search, factor, mathematics"
+    />
+    <meta name="author" content="Patrick Rodriguez" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="single-prime.js" defer></script>
+  </head>
+  <body>
+    <!-- *********** HEADER SECTION ************** -->
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <img src="menu.svg" alt="hamburger icon" />
+      </label>
+      <label class="logo">Matters of Note</label>
+      <ul id="nav">
+        <li><a class="active" href="index.html">Single</a></li>
+        <li><a href="range.html">Range</a></li>
+        <!-- <li><a href="about.html">About</a></li> -->
+        <!-- <li><a href="#">Contact</a></li> -->
+      </ul>
+    </nav>
+
+    <!-- ********* MAIN CONTENT *********** -->
+
+    <div class="container">
+      <div id="p-info">
+        <h3>SINGLE INTEGER CHECK</h3>
+        <p>
+          This program verify if a given integer is a prime number or not. If
+          the integer is not a prime number then its a composite number (a
+          number that has factors other than 1 and itself).
+        </p>
+        <p>
+          Direct search factorization is the method employed here due to its
+          straitghtforwardness for small numbers search. This method
+          systematically divides the number until a factor is found or the
+          search ceiling limit is reached.
+        </p>
+        <p>The search stops when the algorithm finds a factor.</p>
+        <p>The following numbers are not evaluated.</p>
+
+        <ul id="list">
+          <li>
+            Numbers that are not primes by definition: 0, 1 and negative
+            numbers.
+          </li>
+          <li>
+            Even numbers can not be primes except 2 the only even prime number.
+          </li>
+          <li>
+            The number 5 is a prime number. However, numbers higher than 5 that
+            have 5 as a last digit cannot be primes.
+          </li>
+          <li>Exponential notation.</li>
+          <li>Numbers higher than max limit: js_max_safe_integer (2^53)-1</li>
+        </ul>
+      </div>
+
+      <div id="number-check">
+        <h3>ENTER ANY INTEGER (from 2 to 9007199254740991)</h3>
+        <form action="javascript:main();" name="integer" id="int-form">
+          <input
+            type="number"
+            name="integer"
+            autofocus
+            id="inputId"
+            value=""
+            required
+            min="2"
+            max="9007199254740991"
+          />
+
+          <input type="reset" id="reset" value="Reset" />
+          <button>SUBMIT</button>
+        </form>
+      </div>
+
+      <div id="results">
+        <h3>RESULTS</h3>
+        <p id="demo"></p>
+      </div>
+
+      <div id="related">
+        <h3>RELATED SITES</h3>
+        <a
+          href="https://en.wikipedia.org/wiki/List_of_prime_numbers"
+          target="_blank"
+          >List of Prime Numbers</a
+        >
+        <br />
+        <a
+          href="https://en.wikipedia.org/wiki/Formula_for_primes"
+          target="_blank"
+          >Formulas for Primes</a
+        >
+        <br />
+        <a href="https://mathworld.wolfram.com/" target="_blank"
+          >Wolfram (Best on Math)</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Range of Primes</title>
+    <meta
+      name="description"
+      content="Prime number generator algorithm. It finds and lists prime numbers from a given range of positive integers up to (2^53) - 1."
+    />
+    <meta
+      name="keywords"
+      content="Prime, prime, number, computer program, algorithm, integer, composite, mathematics."
+    />
+    <meta name="author" content="Patrick Rodriguez" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="range.js"></script>
+  </head>
+  <body>
+    <!-- *********** HEADER SECTION ************** -->
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <img src="menu.svg" alt="hamburger icon" />
+      </label>
+      <label class="logo">Matters of Note</label>
+      <ul id="nav">
+        <li><a href="index.html">Single</a></li>
+        <li><a class="active" href="range.html">Range</a></li>
+        <!-- <li><a href="about.html">About</a></li> -->
+        <!-- <li><a href="#">Contact</a></li> -->
+      </ul>
+    </nav>
+
+    <!-- ********* MAIN CONTENT *********** -->
+
+    <div class="container">
+      <div class="nav-info">
+        <h3>PRIME NUMBERS GENERATOR</h3>
+        <div>
+          <p>
+            This program generates prime numbers for a given range of integers.
+            Same info from Home page apply here.
+          </p>
+          <p>
+            The Java Script maximum number limit or: js_max_safe_integer is:
+            (2^53)-1 = 9,007,199,254,740,991.
+          </p>
+        </div>
+      </div>
+      <br />
+
+      <form action="javascript:main();" id="rangeInfo">
+        <h3>ENTER RANGE OF INTEGERS (from 2 to 9007199254740991)</h3>
+        <input
+          type="number"
+          id="startN"
+          placeholder="Enter Starting Integer"
+          autofocus
+          value=""
+          required
+          min="2"
+          max="9007199254740991"
+        />
+        <input
+          type="number"
+          id="stopN"
+          placeholder="Enter Ending Integer"
+          value=""
+          required
+          min="2"
+          max="9007199254740991"
+        />
+        <input id="reset" type="reset" value="Reset" />
+        <button>SUBMIT</button>
+      </form>
+
+      <div class="nav-results">
+        <h3 id="prmsFound">PRIME NUMBERS FOUND</h3>
+        <div id="nav-primes"></div>
+      </div>
+    </div>
+  </body>
+</html>
